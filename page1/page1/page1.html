@@ -1,0 +1,472 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>页面一</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/page1.css">
+    <link rel="stylesheet" href="./css/page-detail.css">
+    <link rel="stylesheet" href="./css/dongxian.css">
+    <link rel="stylesheet" href="./css/hot.css">
+    <style>
+        body {
+            background: url('./imgs/index_bk.png') no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrap">
+        <audio src="./imgs/bk.mp3" id="audio1" hidden="true" autoplay="true" loop="true"></audio>
+        <div class="logo">
+            <img src="./imgs/logo.png" alt="">
+        </div>
+        <!-- <div class="filters">
+            <p id="starttime"></p>
+            <p id="endtime"></p>
+        </div> -->
+        <div class="page-box">
+            <!-- 左侧 -->
+            <div style="width: 52%;height: 100%;float: left;">
+                <!-- 模块一 人流统计-->
+                <div class="card-module module1">
+                    <div class="module-name"><span></span> 人流统计</div>
+                    <div class="total-user-box fl">
+                        <div class="circle-box">
+                            <canvas id="progress1" width="210" height="210"></canvas>
+                            <div class="circle-text  color-yellow">
+                                <span class="family-din font-size-34" id="peopleTotal">0</span>人
+                                <br/><span class="color-white font-size-20">总来访量</span></div>
+                        </div>
+                    </div>
+                    <div class="today-user-box spec fl">
+                        <span class="box-line"></span>
+                        <div class="today-user-info">
+                            <p>今日用户</p>
+                            <p><span class="family-din font-size-40" id="todayUsers">0</span>人</p>
+                            <p>今日驾车用户</p>
+                            <p><span class="family-din font-size-40" id="totalCarUsers">0</span>人</p>
+                        </div>
+                        <span class="box-line"></span>
+                    </div>
+                    <div class="laifang-rate-box fl">
+
+                        <div style="width: 100%;height: 100%;">
+                            <div id="laifang-chart" style="width:99%;height:100%;"></div>
+                        </div>
+                        <div class="laifang-rate-text">来访次数比例</div>
+                        <div class="age-group-text" style="bottom: 18%!important;top:auto!important;min-width:100px!important;right:5%!important;">
+                            <ul id="laifang-chart-legend">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="today-detail-box fl">
+                        <span class="box-line"></span>
+                        <div id="user-chart" style="width:98%;height:100%;"></div>
+                    </div>
+                </div>
+
+                <!-- 车辆统计 -->
+                <div class="card-module module3">
+                    <div class="module-name"><span></span> 车辆统计</div>
+                    <div class="total-user-box fl" style="width:40%;">
+                        <div class="circle-box  fl">
+                            <!--  <circle-progress :percent="70" :colornum="'#48E6CF'"></circle-progress> -->
+                            <canvas id="progress2" width="210" height="210"></canvas>
+                            <div class="circle-text color-blue-4">
+                                <span class="family-din font-size-34" id="carTotal">0</span>辆
+                                <br/><span class="color-white font-size-16">总车辆数</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="today-user-box fl" style="width:27%;flex-direction:column;justify-content: center;height: 50%;border-left:2px solid rgba(41, 48, 84, 0.33);border-right:2px solid rgba(41, 48, 84, 0.33)">
+                        <p>今日车辆</p>
+                        <p><span class="family-din font-size-40" id="todayCarTotal">0</span>辆</p>
+                    </div>
+                    <div class="total-user-box fl" style="width:32%;">
+                        <div class="circle-box color-purple fl">
+                            <canvas id="matchPercent"></canvas>
+                            <div class="circle-text">
+                                <span class="family-din font-size-34" id="bdRate">0</span>%
+                                <br/><span class="color-white font-size-16">驾车人数比例</span></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 来访车辆类型统计 -->
+                <div class="card-module module8">
+                    <div class="module-name"><span></span> 来访车辆类型统计</div>
+                    <div class="car-type-chart">
+                        <div id="car-type-chart" style="width:75%;height:90%;"></div>
+                        <div class="age-group-text spec-c" style="top:0%!important;right:5%!important;">
+                            <ul id="car-big-type-legend">
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- 年龄分布 -->
+                <div class="card-module module5">
+                    <div class="module-name"><span></span> 性别年龄分布</div>
+                    <div class="user-attribute">
+                        <div class="user-attribute-text">
+                            <p class="font-size-34 color-blue family-din" id="sex-rate"></p>
+                            <p>男女比例</p>
+                        </div>
+                        <div id="sex-chart" style="width:100%;height:100%;"></div>
+                    </div>
+                    <div class="age-group">
+                        <span class="box-line"></span>
+                        <div id="age-chart" style="width:70%;height:100%;"></div>
+                        <div class="age-group-text">
+                            <p>年龄构成</p>
+                            <ul id="age-legend">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 客流统计 -->
+                <div class="card-module module2">
+                    <div class="module-name"><span></span> 客流统计</div>
+                    <div style="height:75%;">
+                        <div id="user-flow-chart" style="width:100%;height:100%;"></div>
+                    </div>
+                </div>
+
+                <!-- 来访车型品牌统计 -->
+                <div class="card-module module4">
+                    <div class="module-name"><span></span> 来访车型品牌统计</div>
+                    <div style="height:75%;">
+                        <div id="cartype-chart" style="width:100%;height:100%;"></div>
+                    </div>
+                    <div class="age-group-text" style="top:12%!important;right: 2%!important;">
+                        <ul id="car-type-legend">
+                            <li>
+                                <span class="ico-circle"></span>
+                                <span>其他</span>
+                                <span class="age-total-rate">40%</span>
+                            </li>
+                            <!-- <li>
+                                <span class="ico-circle"></span>
+                                <span>奥迪</span>
+                                <span class="age-total-rate">40%</span>
+                            </li>
+                            <li>
+                                <span class="ico-circle"></span>
+                                <span>别克</span>
+                                <span class="age-total-rate">40%</span>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 区域客流数 -->
+                <div class="card-module module6">
+                    <div class="module-name"><span></span> 区域客流数</div>
+                    <div class="area-user-box">
+                        <div id="area-user-chart" style="width:100%;height:100%;"></div>
+                        <!--  <div class="top-text"><span class="orange-circle"></span> <span>大屏左侧</span>有较高的访问量</div> -->
+                    </div>
+                </div>
+                <!-- 驻客停留时长分布统计 -->
+                <div class="card-module module7">
+                    <div class="module-name"><span></span> 驻客停留时长分布统计</div>
+                    <div class="area-user-box">
+                        <div id="stop-time-chart" style="width:100%;height:100%;"></div>
+                        <!-- <div class="top-text"><span class="orange-circle"></span>来访时间段<span>120分钟以上</span>有较高的访问量</div> -->
+                        <div style="
+                        position: absolute;
+                        right: 11px;
+                        bottom: 2px;
+                        font-size: 10px;
+                        transform: scale3d(0.8,0.8,1);
+                    ">人</div>
+                    </div>
+                </div>
+
+                <!-- 车流统计 -->
+                <div class="card-module module9">
+                    <div class="module-name"><span></span> 车流统计</div>
+                    <div style="height:75%;">
+                        <div id="car-flow-chart" style="width:100%;height:100%;"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 右侧 -->
+            <div style="width: 48%;height: 100%;float: left;">
+                <div class="card-module module10">
+                    <!-- 人脸列表 -->
+                    <div class="dx-module-left">
+                        <div class="dx-left-1">
+                            <div class="title-bar">人脸识别</div>
+                            <div class="active-img-box" id="active-big-img"></div>
+                            <div class="user-detail-infos">
+                                <div class="active-people-header">
+                                    <div class="active-header-img" id="active-header">
+                                        <img src="./imgs/user-default.png" alt="">
+                                    </div>
+                                    <p id="active-time">11:23:12</p>
+                                </div>
+                                <div class="active-people-info1">
+                                    <p>
+                                        <span>年龄段</span>
+                                        <span id="active-age">--</span>
+                                    </p>
+                                    <p>
+                                        <span>性别</span>
+                                        <span id="active-sex">--</span>
+                                    </p>
+                                    <p>
+                                        <span>车牌号</span>
+                                        <span id="active-car">--</span>
+                                    </p>
+                                    <p>
+                                        <span>戴眼镜</span>
+                                        <span id="active-glass">--</span>
+                                    </p>
+                                    <p>
+                                        <span>姓名</span>
+                                        <span id="active-name">--</span>
+                                    </p>
+
+                                </div>
+                                <div class="active-people-info1 list-t-spec">
+                                    <p>
+                                        <span>联系方式</span>
+                                        <span id="active-phone">--</span>
+                                    </p>
+                                    <p>
+                                        <span>到访次数</span>
+                                        <span id="active-daofang">--</span>
+                                    </p>
+                                    <p>
+                                        <span>停留时长</span>
+                                        <span id="active-times">--</span>
+                                    </p>
+                                    <p>
+                                        <span>金科业主</span>
+                                        <span id="active-yezhu">--</span>
+                                    </p>
+                                    <p>
+                                        <span>上次到访时间</span>
+                                        <span id="active-last-time">--</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 最近抓拍访客 -->
+                        <div class="dx-left-2">
+                            <div class="people-list-title" onclick="showHot()">最近抓拍访客</div>
+                            <ul class="people-list" id="people-list">
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 右侧动线 -->
+                    <div class="dx-module-right">
+
+                        <!-- 动线区域 -->
+                        <div class="dx-map">
+                            <!-- 加载中样式 -->
+                            <div class="loading-box">
+                                <div id="container-loading">
+                                    <div class="stick"></div>
+                                    <div class="stick"></div>
+                                    <div class="stick"></div>
+                                    <div class="stick"></div>
+                                    <div class="stick"></div>
+                                    <div class="stick"></div>
+                                    <div class="stick"></div>
+                                    <div class="stick"></div>
+
+                                    <h1>Loading...</h1>
+                                </div>
+                            </div>
+                            <!-- 动线区域 -->
+                            <div class="house-map dongxian">
+                                <div class="point-hotarea-group">
+                                    <!--从左至右9个点-->
+                                    <!--停车场-->
+                                    <div class="point-h-0 "></div>
+                                    <!--LED1-->
+                                    <div class="point-h-3  "></div>
+                                    <!--LED2-->
+                                    <div class="point-h-4  "></div>
+                                    <!--人脸识别1-->
+                                    <div class="point-h-6 "></div>
+                                    <!--人脸识别2-->
+                                    <div class="point-h-1 "></div>
+                                    <!--体验区1-->
+                                    <div class="point-h-2 "></div>
+                                    <!--体验区2-->
+                                    <div class="point-h-5 "></div>
+                                    <!--停车场 黄色-->
+                                    <div class="point-h-7 "></div>
+                                    <!--无人超市-->
+                                    <div class="point-h-8 "></div>
+                                </div>
+                                <canvas id="myCanvas" width="1665" height="765" style="position: absolute;top:0;left:0;"></canvas>
+                                <div class="house-point-box point-0">
+                                    <div></div>
+                                    <div></div>
+                                    <div class="house-point"></div>
+                                    <div class="hot-camera-0" onclick="showVideo('rtsp://admin:hik12345@10.15.8.5:554/h264/ch1/sub/av_stream')"></div>
+                                </div>
+                                <!-- 人脸识别展厅 1-->
+                                <div class="house-point-box point-1">
+                                    <div></div>
+                                    <div></div>
+                                    <div class="house-point"></div>
+                                    <div class="hot-camera-1" onclick="showVideo('rtsp://admin:jkwy1234@10.15.208.197:554/h264/ch1/sub/av_stream')"></div>
+                                </div>
+                                <!-- 大厅右侧 2-->
+                                <div class="house-point-box point-2">
+                                    <div></div>
+                                    <div></div>
+                                    <div class="house-point"></div>
+                                    <div class="hot-camera-2" onclick="showVideo('rtsp://admin:jkwy8888@10.15.8.172:554/h264/ch1/sub/av_stream')"></div>
+                                </div>
+                                <!-- 大屏右侧 6-->
+                                <div class="house-point-box point-3">
+                                    <div></div>
+                                    <div></div>
+                                    <div class="house-point"></div>
+                                    <div class="hot-camera-3" onclick="showVideo('rtsp://admin:jkwy8888@10.15.8.175:554/h264/ch1/sub/av_stream')"></div>
+                                </div>
+                                <!-- 大屏左侧 4-->
+                                <div class="house-point-box point-4">
+                                    <div></div>
+                                    <div></div>
+                                    <div class="house-point"></div>
+                                    <div class="hot-camera-4" onclick="showVideo('rtsp://admin:jkwy8888@10.15.8.177:554/h264/ch1/sub/av_stream')"></div>
+                                </div>
+                                <!-- 大厅左侧 7-->
+                                <div class="house-point-box point-5">
+                                    <div></div>
+                                    <div></div>
+                                    <div class="house-point"></div>
+                                    <div class="hot-camera-5" onclick="showVideo('rtsp://admin:jkwy8888@10.15.8.176:554/h264/ch1/sub/av_stream')"></div>
+                                </div>
+                                <!-- 大屏出口 5-->
+                                <div class="house-point-box point-6">
+                                    <div></div>
+                                    <div></div>
+                                    <div class="house-point"></div>
+                                    <div class="hot-camera-6" onclick="showVideo('rtsp://admin:jkwy8888@10.15.8.174:554/h264/ch1/sub/av_stream')"></div>
+                                </div>
+                                <!-- 大厅入口 3-->
+                                <div class="house-point-box point-7">
+                                    <div></div>
+                                    <div></div>
+                                    <div class="house-point"></div>
+                                    <div class="hot-camera-7" onclick="showVideo('rtsp://admin:jkwy8888@10.15.8.173:554/h264/ch1/sub/av_stream')"></div>
+                                </div>
+                                <!-- 无人超时 8-->
+                                <div class="house-point-box point-8">
+                                    <div></div>
+                                    <div></div>
+                                    <div class="house-point"></div>
+                                    <div class="hot-camera-8" onclick="showVideo('rtsp://admin:jkwy8888@10.15.209.245:554/h264/ch1/sub/av_stream')"></div>
+                                </div>
+                                <!-- 最近入场车辆 -->
+                                <div class="active-car-box">
+                                    <p>最近入场车辆</p>
+                                    <ul>
+                                        <li onclick="showVideo('rtsp://admin:hik12345@10.15.8.5:554/h264/ch1/sub/av_stream')">
+                                            <img class="active-car-img" id="active-car-img" src="./imgs/user-default.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="./imgs/dx/ico-number.png" alt="">
+                                            <span class="color-blue-7 padding-right-8">车牌号:</span>
+                                            <span id="active-car-number"></span>
+                                        </li>
+                                        <li>
+                                            <img src="./imgs/dx/ico-time.png" alt="">
+                                            <span class="color-blue-7 padding-right-8"><span class="color-green-5">进场</span> 时间:</span>
+                                            <span id="active-car-time"></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- 点人脸信息 -->
+                                <div id="infoHtml">
+                                </div>
+                                <!-- 点数字信息 -->
+                                <div id="infoNumber">
+
+                                </div>
+                                <!--线框-->
+                                <div class="line-around"></div>
+                                <!--地标-->
+                                <div class="kuai-di">
+                                    <img src="./imgs/ico-kd-1.png" alt="">
+                                    <img src="./imgs/ico-kd-2.png" alt="">
+                                </div>
+                                <div class="kuai-di kuai-di-1">
+                                    <img src="./imgs/ico-kd-1.png" alt="">
+                                    <img src="./imgs/ico-kd-2.png" alt="">
+                                </div>
+                                <div class="wei-xin">
+                                    <img src="./imgs/ico-wx-1.png" alt="">
+                                    <img src="./imgs/ico-wx-2.png" alt="">
+                                </div>
+                                <div class="face-show">
+                                    <img src="./imgs/ico-face-1.png" alt="">
+                                    <img src="./imgs/ico-face-2.png" alt="">
+                                </div>
+                                <div class="doctor-show">
+                                    <img src="./imgs/ico-doctor-1.png" alt="">
+                                    <img src="./imgs/ico-doctor-2.png" alt="">
+                                </div>
+                                <div class="tiyan-show">
+                                    <img src="./imgs/ico-ty-1.png" alt="">
+                                    <img src="./imgs/ico-ty-2.png" alt="">
+                                </div>
+                                <div class="market-show market-show-1">
+                                    <img src="./imgs/ico-market-1.png" alt="">
+                                    <img src="./imgs/ico-market-2.png" alt="">
+                                </div>
+                                <div class="market-show market-show-2">
+                                    <img src="./imgs/ico-market-1.png" alt="">
+                                    <img src="./imgs/ico-market-2.png" alt="">
+                                </div>
+                                <div class="market-show market-show-3">
+                                    <img src="./imgs/ico-market-1.png" alt="">
+                                    <img src="./imgs/ico-market-2.png" alt="">
+                                </div>
+                                <div class="market-show market-show-4">
+                                    <img src="./imgs/ico-market-1.png" alt="">
+                                    <img src="./imgs/ico-market-2.png" alt="">
+                                </div>
+                                <div class="screen-show">
+                                    <img src="./imgs/ico-screen.png" alt="">
+                                </div>
+                                <div class="screen-code">
+                                    <img src="./imgs/dx/ico-code.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dx-car">
+                            <div class="title-bar-2"></div>
+                            <ul id="last-car-list">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./lib/jquery.min.js"></script>
+<script src="./js/basicUrl.js "></script>
+<script src="./lib/echarts.min.js "></script>
+<script src="./js/circle-progress.js "></script>
+<script src="./js/pieChart.js "></script>
+<script src="./js/lineChart.js "></script>
+<script src="./js/barChart.js "></script>
+<script src="./js/page1.js "></script>
+<script src="./js//dongxian.js "></script>
+<script src="./js/hot.js"></script>
+
+</html>

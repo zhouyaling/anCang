@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Microsoft YaHei";
+    /*  overflow: hidden; */
+}
+
+body {
+    overflow: scroll;
+    /*  overflow: hidden; */
+}
+
+a {
+    color: #444;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.fl {
+    float: left;
+}
+
+.font-size-14 {
+    font-size: 14px;
+}
+
+.font-size-16 {
+    font-size: 16px;
+}
+
+.font-size-18 {
+    font-size: 18px;
+}
+
+.font-size-20 {
+    font-size: 20px;
+}
+
+.font-size-12 {
+    font-size: 12px;
+}
+
+.font-size-34 {
+    font-size: 34px;
+}
+
+.font-size-40 {
+    font-size: 40px;
+}
+
+.font-size-44 {
+    font-size: 44px;
+}
+
+.color-white {
+    color: #fff;
+}
+
+.color-blue {
+    color: #209aff;
+}
+
+.color-blue-4 {
+    color: #48E6CF;
+}
+
+.color-blue-6 {
+    color: #48A7E6!important;
+}
+
+.color-blue-7 {
+    color: #196DF7!important;
+}
+
+.color-gray-7 {
+    color: #A7A7A7;
+}
+
+.color-gray-4 {
+    color: #444444;
+}
+
+.color-yellow {
+    color: #FFCA36;
+}
+
+.color-purple {
+    color: #4864E6;
+}
+
+.color-green-5 {
+    color: #529115!important;
+}
+
+.ul-reset li {
+    float: left;
+    list-style: none;
+}
+
+.text-align-r {
+    text-align: right;
+}
+
+.title-bar-tip {
+    display: inline-block;
+    width: 3px;
+    height: 15px;
+    border-radius: 2px;
+    margin-right: 9px;
+    background-color: #DADADA;
+}
+
+
+/* 重置样式 */
+
+.row {
+    margin: 0 0 15px 0!important;
+}
+
+.panel {
+    border-radius: 0!important;
+}
+
+.form-control {
+    border-radius: 0!important;
+}
+
+.panel-heading {
+    position: relative;
+}
+
+.panel-title {
+    font-size: 14px;
+    color: #444444;
+    font-weight: 700;
+    letter-spacing: 0.18px;
+    display: flex;
+}
+
+.panel-body {
+    height: 220px;
+}
+
+.panel-body-300 {
+    height: 300px;
+}
+
+.panel-body-400 {
+    height: 400px;
+}
+
+.label-text {
+    height: 34px;
+    line-height: 34px;
+    width: auto;
+    padding: 0;
+    padding-left: 15px;
+}
+
+.label-text span {
+    font-weight: 700;
+}
+
+.wrap-container {
+    background: #fff;
+    padding: 15px 0;
+}
+
+.modal-content {
+    border-radius: 4px!important;
+}
+
+.modal-title {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.modal-header {
+    padding: 10px!important;
+}
+
+.pagging-reset {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* 圆圈样式 */
+
+.circle-box {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.circle-box canvas {}
+
+.circle-box .circle-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    /* color: #293846; */
+    letter-spacing: 0.2px;
+}
+
+.index-container {
+    width: 5760px;
+    height: 1080px;
+    margin: 0 auto;
+    background: url('../imgs/index_bk.png') no-repeat 0;
+    background-size: 5760px 1080px;
+}
+
+
+/* 特殊字体 */
+
+.family-din {
+    font-family: din;
+    /* font-weight: bold; */
+}
+
+@font-face {
+    font-family: din;
+    src: url('../fonts/DIN.TTF');
+}
+
+@font-face {
+    /* font-properties */
+    font-family: pictos;
+    src: url('../fonts/PINGFANG LIGHT.TTF');
+}
+
+@font-face {
+    font-family: PingFang-Regular;
+    src: url('../fonts/PINGFANG REGULAR.TTF');
+}
+
+
+/* 页面模块卡片 */
+
+.card-module {
+    background: rgba(178, 188, 249, 0.04);
+    border-radius: 14px;
+    /* height: 368px; */
+    height: 290px;
+    margin-top: 20px;
+    margin-left: 20px;
+    float: left;
+}
+
+.module-name {
+    font-size: 22px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.module-name span {
+    display: inline-block;
+    background: #1D76F8;
+    border-radius: 8px;
+    width: 5px;
+    height: 24px;
+    margin-right: 18px;
+    margin-left: 48px;
+}

@@ -1,0 +1,197 @@
+.point-hotarea-group {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    ;
+}
+
+.point-h-0 {
+    width: 279px;
+    height: 259px;
+    background: url(../imgs/hot/1-1.png);
+    background-size: 100%;
+    position: absolute;
+    top: 513px;
+    left: 150px;
+}
+
+.point-h-3 {
+    width: 244px;
+    height: 153px;
+    background: url(../imgs/hot/1-1.png);
+    background-size: 100%;
+    position: absolute;
+    top: 228px;
+    left: 544px;
+}
+
+.point-h-4 {
+    width: 244px;
+    height: 153px;
+    background: url(../imgs/hot/1-1.png);
+    background-size: 100%;
+    position: absolute;
+    top: 228px;
+    left: 717px;
+}
+
+.point-h-6 {
+    width: 159px;
+    height: 100px;
+    background: url(../imgs/hot/3-1.png);
+    background-size: 100%;
+    position: absolute;
+    top: 177px;
+    left: 879px;
+}
+
+.point-h-1 {
+    width: 159px;
+    height: 100px;
+    background: url(../imgs/hot/3-1.png);
+    background-size: 100%;
+    position: absolute;
+    top: 177px;
+    left: 985px;
+}
+
+.point-h-2 {
+    width: 130px;
+    height: 100px;
+    background: url(../imgs/hot/3-1.png);
+    background-size: 100%;
+    position: absolute;
+    top: 227px;
+    left: 1114px;
+}
+
+.point-h-5 {
+    width: 187px;
+    height: 100px;
+    background: url(../imgs/hot/3-1.png);
+    background-size: 100%;
+    position: absolute;
+    top: 285px;
+    left: 1125px;
+}
+
+.point-h-7 {
+    width: 132px;
+    height: 100px;
+    background: url(../imgs/hot/3-1.png);
+    background-size: 100%;
+    position: absolute;
+    top: 415px;
+    left: 1158px;
+    z-index: 7;
+}
+
+.point-h-8 {
+    width: 178px;
+    height: 100px;
+    background: url(../imgs/hot/3-1.png);
+    background-size: 100%;
+    position: absolute;
+    top: 268px;
+    left: 1342px;
+}
+
+.p-1-1 {
+    background: url(../imgs/hot/1-1.png) !important;
+    background-size: 100% !important;
+}
+
+.p-1-2 {
+    background: url(../imgs/hot/1-2.png) !important;
+    background-size: 100% !important;
+}
+
+.p-1-3 {
+    background: url(../imgs/hot/1-3.png) !important;
+    background-size: 100% !important;
+}
+
+.p-1-4 {
+    background: url(../imgs/hot/1-4.png) !important;
+    background-size: 100% !important;
+}
+
+.p-2-1 {
+    background: url(../imgs/hot/2-1.png) !important;
+    background-size: 100% !important;
+}
+
+.p-2-2 {
+    background: url(../imgs/hot/2-2.png) !important;
+    background-size: 100% !important;
+}
+
+.p-2-3 {
+    background: url(../imgs/hot/2-3.png) !important;
+    background-size: 100% !important;
+}
+
+.p-2-4 {
+    background: url(../imgs/hot/2-4.png) !important;
+    background-size: 100% !important;
+}
+
+.p-3-1 {
+    background: url(../imgs/hot/3-1.png) !important;
+    background-size: 100% !important;
+}
+
+.p-3-2 {
+    background: url(../imgs/hot/3-2.png) !important;
+    background-size: 100% !important;
+}
+
+.p-3-3 {
+    background: url(../imgs/hot/3-3.png) !important;
+    background-size: 100% !important;
+}
+
+.p-3-4 {
+    background: url(../imgs/hot/3-4.png) !important;
+    background-size: 100% !important;
+}
+
+.p-4-1 {
+    background: url(../imgs/hot/4-1.png) !important;
+    background-size: 100% !important;
+}
+
+.p-4-2 {
+    background: url(../imgs/hot/4-2.png) !important;
+    background-size: 100% !important;
+}
+
+.p-4-3 {
+    background: url(../imgs/hot/4-3.png) !important;
+    background-size: 100% !important;
+}
+
+.p-4-4 {
+    background: url(../imgs/hot/4-4.png) !important;
+    background-size: 100% !important;
+}
+
+.p-5-1 {
+    background: url(../imgs/hot/5-1.png) !important;
+    background-size: 100% !important;
+}
+
+.p-5-2 {
+    background: url(../imgs/hot/5-2.png) !important;
+    background-size: 100% !important;
+}
+
+.p-5-3 {
+    background: url(../imgs/hot/5-3.png) !important;
+    background-size: 100% !important;
+}
+
+.p-5-4 {
+    background: url(../imgs/hot/5-4.png) !important;
+    background-size: 100% !important;
+}

@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>视屏展示页面</title>
+    <link rel="stylesheet" href="css/app.css">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<!--页面-->
+<div class="main">
+    <!--左边视屏-->
+    <div class="left-m">
+        <div class="video-m">
+            <video id="myVideo1" src="" type="video/mp4" style="width:100%; height:100%; " loop>
+
+            </video>
+        </div>
+    </div>
+    <!--中间动画显示-->
+    <div class="center-m">
+        <!--客服中心-->
+        <div class="service">
+            <div class="default ">
+                <div>便利智慧-公区设施</div>
+                <div>快递柜&emsp;早餐机</div>
+            </div>
+            <!--线-->
+            <img src="img/line-2.png" class="line-1">
+            <!--圆心-->
+            <div class="heart-jump heart-b"></div>
+        </div>
+        <!--共区-->
+        <div class="public-area">
+            <div class="default">
+                <div> 安全智慧-公区</div>
+                <div>身份定位&emsp;人行轨迹&emsp;黑名单预警</div>
+            </div>
+            <!--线-->
+            <img src="img/line-1.png" class="line-2">
+            <!--圆心-->
+            <div class="heart-jump heart-b"></div>
+        </div>
+        <!--大门-->
+        <div class="big-door">
+            <div class="default">
+                <div>安全智慧-大门</div>
+                <div>人脸识别&emsp;防尾随&emsp;儿童安全门岗</div>
+            </div>
+            <!--线-->
+            <img src="img/line-3.png" class="line-3">
+            <!--圆心-->
+            <div class="heart-jump heart-b"></div>
+        </div>
+        <!--工区设施-->
+        <div class="facilities">
+            <div class="default">
+                <div> 便利智慧-公区设施</div>
+                <div>无人超市</div>
+            </div>
+            <!--线-->
+            <img src="img/line-4.png" class="line-4">
+            <!--圆心-->
+            <div class="heart-jump heart-t" style="top: -41px"></div>
+        </div>
+        <!--家庭1-->
+        <div class="family-1">
+            <div class="default">
+                <div> 健康智慧-家庭</div>
+                <div>远程问诊&emsp;24小时购药</div>
+
+            </div>
+            <!--线-->
+            <img src="img/line-4.png" class="line-5">
+            <!--圆心-->
+            <div class="heart-jump heart-t" style="top: -41px"></div>
+        </div>
+        <!--家庭2-->
+        <div class="family-2">
+            <div class="default">
+                <div>居家智慧-家庭</div>
+                <div>AI助手&emsp;家居控制</div>
+            </div>
+            <!--线-->
+            <img src="img/line-3.png" class="line-3">
+            <!--圆心-->
+            <div class="heart-jump heart-b"></div>
+        </div>
+        <!--设备房-->
+        <div class="equipment">
+            <div class="default">
+                <div>服务智慧-设备房</div>
+                <div>能耗预警管理&emsp;EBA设备管理</div>
+
+            </div>
+            <!--线-->
+            <img src="img/line-7.png" class="line-7">
+            <!--圆心-->
+            <div class="heart-jump heart-t" style="top: -97px;left: 114px;"></div>
+        </div>
+        <!--车库入口-->
+        <div class="garage">
+            <div class="default">
+                <div> 安全智慧-车库入口</div>
+                <div>车辆识别 来访授权 黑名单警告<br>扫码支付</div>
+            </div>
+            <!--线-->
+            <img src="img/line-8.png" class="line-8">
+            <!--圆心-->
+            <div class="heart-jump heart-t" style="left: 82px;top: -36px;"></div>
+        </div>
+        <!--楼栋-->
+        <div class="build">
+            <div class="default">
+                <div>安全智慧-楼栋</div>
+                <div>电梯管控&emsp;智能照明<br>给排水消防&emsp;能耗预警管理</div>
+            </div>
+            <!--线-->
+            < <img src="img/line-9.png" class="line-9">
+            <!--圆心-->
+            <div class="heart-jump heart-t" style="left: 4px;top:-84px;"></div>
+        </div>
+
+
+    </div>
+    <!--logo-->
+    <div class="logo" >
+
+    </div>
+    <!--右边视频展示-->
+    <div class="right-m">
+        <div class="video-m">
+            <video id="myVideo2" src="" type="video/mp4" style="width:100%; height:100%; " loop>
+            </video>
+        </div>
+    </div>
+</div>
+<script>
+
+    //webSocket 配置
+    if (window.WebSocket) {
+        var ws = new WebSocket('ws://101.200.194.246:9911');
+        ws.onopen = function (e) {
+            console.log("连接服务器成功");
+            var item = {};
+            item.type = "regist";
+            item.server = "no";
+            item.value = "server2010701";
+            item.order = [];
+
+            ws.send(JSON.stringify(item));
+        }
+        ws.onclose = function (e) {
+            console.log("服务器关闭");
+        }
+        ws.onerror = function () {
+            console.log("连接出错");
+        }
+        ws.onmessage = function (e) {
+            var item = JSON.parse(e.data);
+            console.log(item)
+            showPage(item.showImg);
+            var item = order("1");
+            ws.send(JSON.stringify(item));
+        }
+    }
+    !function init() {
+        $('.right-m').hide();
+        $('.left-m').hide();
+        $('.center-m>div:eq(0)').fadeIn(500, function () {
+            $(this).children('img').fadeIn(500);
+            $('.center-m>div:eq(1)').fadeIn(500, function () {
+                $(this).children('img').fadeIn(500);
+                $('.center-m>div:eq(2)').fadeIn(500, function () {
+                    $(this).children('img').fadeIn(500);
+                    $('.center-m>div:eq(3)').fadeIn(500, function () {
+                        $(this).children('img').fadeIn(500);
+                        $('.center-m>div:eq(4)').fadeIn(500, function () {
+                            $(this).children('img').fadeIn(500);
+                            $('.center-m>div:eq(5)').fadeIn(500, function () {
+                                $(this).children('img').fadeIn(500);
+                                $('.center-m>div:eq(6)').fadeIn(500, function () {
+                                    $(this).children('img').fadeIn(500);
+                                    $('.center-m>div:eq(7)').fadeIn(500, function () {
+                                        $(this).children('img').fadeIn(500);
+                                        $('.center-m>div:eq(8)').fadeIn(500, function () {
+                                            $(this).children('img').fadeIn(500);
+                                            chooseMoulde(0)
+                                        });
+                                    });
+                                });
+                            });
+                        });
+
+                    });
+                });
+            });
+        });
+    }()
+    //    t:0-9
+    function chooseMoulde(t) {
+        $('.right-m').hide();
+        var dom = $('.center-m>div:eq(' + t + ')');
+        dom.children('.default ').addClass('bg-yse');
+        dom.siblings('div').children('.default').removeClass('bg-yse');
+        $('.right-m').fadeIn(500);
+        $('.left-m').fadeIn(500);
+        var myAudio2 = document.getElementById('myVideo2');
+        myAudio2.src = 'media/' + t + ".mp4";
+        if (myAudio2 !== null) {
+            if (myAudio2.paused) {
+                myAudio2.currentTime = 0;
+                myAudio2.play();
+            }
+        }
+        var myAudio1 = document.getElementById('myVideo1');
+        myAudio1.src = 'media/' + t + ".mp4";
+        if (myAudio1 !== null) {
+            if (myAudio1.paused) {
+                myAudio1.currentTime = 0;
+                myAudio1.play();
+            }
+        }
+    }
+
+
+    //
+    function order(_status) {
+        var item = {};
+        item.type = "order";
+        item.server = "client2010701";//识别客户端
+        item.value = "";
+        item.order = [];
+        var jObj = {
+            status: "1",
+        };
+        item.order.push(jObj)
+        return item;
+    }
+    function showPage(page) {
+        console.log('243243243243243243')
+        console.log(page)
+        switch (page) {
+            case "page31":
+
+                chooseMoulde(0)
+
+                break;
+            case "page32":
+
+                chooseMoulde(1)
+
+                break
+            case "page33":
+                chooseMoulde(2)
+
+                break
+            case "page34":
+
+                chooseMoulde(3)
+
+                break;
+            case "page35":
+                chooseMoulde(4)
+
+
+                break
+            case "page36":
+
+                chooseMoulde(5)
+                break
+            case "page37":
+
+                chooseMoulde(6)
+
+                break;
+            case "page38":
+                chooseMoulde(7)
+
+
+                break
+            case "page39":
+                chooseMoulde(8)
+
+                break
+
+            default:
+              
+                break
+        }
+    }
+
+
+</script>
+</body>
+</html>

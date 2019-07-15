@@ -1,0 +1,513 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html, body, .main, .main-1 {
+    width: 5760px;
+    height: 1080px;
+    position: relative;
+    /*overflow: hidden;*/
+}
+
+.main-1 {
+    background: url("../img/hot-bg.png") no-repeat center;
+    background-size: 5760px 1080px;
+}
+
+.main {
+    background: url("../img/BG.png") no-repeat center;
+    background-size: 5760px 1080px;
+}
+
+.main .left-m, .main .right-m {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2100px;
+    height: 860px;
+
+}
+
+.left-m {
+    left: 180px;
+    background: url("../img/border-l.png") no-repeat center;
+    background-size: 2100px 860px;
+}
+
+.right-m {
+    right: 180px;
+    background: url("../img/border-r.png") no-repeat center;
+    background-size: 2100px 860px;
+}
+
+.center-m {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2000px;
+    height: 1080px;
+    transform: translateX(-50%);
+    /*background-color: red;*/
+
+}
+
+.main .center-m > div {
+    position: absolute;
+    display: none;
+    z-index: 1;
+
+}
+
+.service {
+    width: 380px;
+    height: 160px;
+    top: 143px;
+    left: 594px;
+}
+
+.public-area {
+    width: 548px;
+    height: 227px;
+    top: 290px;
+    left: 337px;
+}
+
+.big-door {
+    width: 337px;
+    height: 79px;
+    top: 528px;
+    left: 236px;
+}
+
+.facilities {
+    width: 306px;
+    height: 70px;
+    top: 655px;
+    left: 445px;
+}
+
+.family-1 {
+    width: 306px;
+    height: 70px;
+    top: 548px;
+    left: 799px;
+}
+
+.family-2 {
+    width: 337px;
+    height: 79px;
+    top: 329px;
+    left: 898px;
+}
+
+.equipment {
+    width: 380px;
+    height: 160px;
+    top: 751px;
+    left: 823px;
+}
+
+.garage {
+    width: 380px;
+    height: 180px;
+    top: 662px;
+    left: 1218px;
+
+}
+
+.build {
+    width: 380px;
+    height: 160px;
+    top: 392px;
+    left: 1437px;
+}
+
+.default {
+    width: 254px;
+    position: absolute;
+    display: inline-block;
+    min-height: 62px;
+    background: url(../img/no-choose.png) no-repeat;
+    background-size: cover;
+    color: white;
+    padding-right: 28px;
+    text-align: right;
+    z-index: 30;
+    animation: bg-shadow 2s ease-in-out infinite alternate;
+}
+
+.bg-yse {
+    background: url(../img/choose.png) no-repeat !important;
+    background-size: cover !important;
+    transform: scale(1.4);
+
+    transition:all 1s ;
+    animation: opacity 1s;
+}
+@keyframes opacity {
+    0% {
+
+        opacity: 1;
+    }
+
+    100% {
+
+        opacity: 1;
+    }
+}
+
+@keyframes bg-shadow {
+    0% {
+
+        opacity: 0.5;
+    }
+
+    100% {
+
+        opacity: 1;
+    }
+}
+
+.default div:nth-of-type(1) {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.default div:nth-of-type(2) {
+    padding: 5px 0 5px 10px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.line-1 {
+    height: 109px;
+    width: auto;
+    top: 28px;
+}
+
+.line-2 {
+    height: 172px;
+    width: auto;
+    top: 28px;
+}
+
+.line-3 {
+    height: 29px;
+    width: auto;
+    top: 28px;
+}
+
+.line-4 {
+
+    height: 46px;
+    width: auto;
+    top: -17px;
+}
+
+.line-5 {
+
+    height: 46px;
+    width: auto;
+    top: -17px;
+}
+
+.line-6 {
+    height: 29px;
+    width: auto;
+    top: 28px;
+}
+
+.line-7 {
+    height: 97px;
+    width: auto;
+    top: -69px;
+    left: 134px;
+
+}
+
+.line-8 {
+    height: 46px;
+    width: auto;
+    top: -12px;
+    left: 95px;
+}
+
+.line-9 {
+    height: 96px;
+    width: auto;
+    top: -61px;
+    left: 22px;
+}
+
+.center-m > div > img {
+    position: absolute;
+    display: none;
+    right: 0;
+
+}
+
+.heart-jump {
+    position: absolute;
+    bottom: 0;
+    right: -18px;
+    width: 36px;
+    height: 25px;
+    background: url(../img/heart.png) no-repeat center;
+    background-size: 36px 25px;
+
+}
+
+.heart-t {
+    animation: heart-t 0.5s ease-in-out infinite alternate;
+}
+
+.heart-b {
+    animation: heart-b 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes heart-b {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes heart-t {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.logo {
+    position: absolute;
+    width: 530px;
+    height: 65px;
+    bottom: 124px;
+    left: 50%;
+    transform: translateX(-50%) scaleY(0.85);
+    background: url(../img/logo.png) no-repeat center;
+    background-size: 530px 65px;
+}
+
+.left-m .video-m {
+    position: absolute;
+    width: 1173px;
+    height: 647px;
+    /*background-color: red;*/
+    top: 66px;
+    left: 71px;
+    transform: scaleY(0.95);
+
+}
+
+.right-m .video-m {
+    position: absolute;
+    width: 1173px;
+    height: 647px;
+    /*background-color: red;*/
+    top: 66px;
+    right: 71px;
+    transform: scaleY(0.95);
+
+}
+
+.main-1 div {
+    position: absolute;
+
+}
+
+.point-0 {
+    width: 502px;
+    height: 340px;
+    background: url(../imgs/1-1.png);
+    background-size: cover;
+    top: 691px;
+    left: 1249px;
+}
+
+.point-3 {
+    width: 502px;
+    height: 340px;
+    background: url(../imgs/1-1.png);
+    background-size: cover;
+    top: 295px;
+    left: 2119px;
+}
+
+.point-4 {
+    width: 502px;
+    height: 340px;
+    background: url(../imgs/1-1.png);
+    background-size: cover;
+    top: 295px;
+    left: 2567px;
+}
+
+.point-6 {
+    width: 237px;
+    height: 150px;
+    background: url(../imgs/3-1.png);
+    background-size: cover;
+    top: 282px;
+    left: 3051px;;
+}
+
+.point-1 {
+    width: 237px;
+    height: 150px;
+    background: url(../imgs/3-1.png);
+    background-size: cover;
+    top: 282px;
+    left: 3231px;
+}
+
+.point-2 {
+    width: 237px;
+    height: 150px;
+    background: url(../imgs/3-1.png);
+    background-size: cover;
+    top: 340px;
+    left: 3445px;
+}
+
+.point-5 {
+    width: 502px;
+    height: 340px;
+
+    background: url(../imgs/3-1.png);
+    background-size: cover;
+    top: 360px;
+    left: 3445px;
+
+}
+
+.point-7 {
+    width: 237px;
+    height: 150px;
+    background: url(../imgs/3-1.png);
+    background-size: cover;
+    top: 630px;
+    left: 3584px;
+}
+
+.point-8 {
+    width: 237px;
+    height: 150px;
+    background: url(../imgs/3-1.png);
+    background-size: cover;
+    top: 499px;
+    left: 4143px;
+}
+
+.p-1-1 {
+    background: url(../imgs/1-1.png) !important;
+    background-size: cover !important;
+}
+
+.p-1-2 {
+    background: url(../imgs/1-2.png) !important;
+    background-size: cover !important;
+}
+
+.p-1-3 {
+    background: url(../imgs/1-3.png) !important;
+    background-size: cover !important;
+}
+
+.p-1-4 {
+    background: url(../imgs/1-4.png) !important;
+    background-size: cover !important;
+}
+
+.p-2-1 {
+    background: url(../imgs/2-1.png) !important;
+    background-size: cover !important;
+}
+
+.p-2-2 {
+    background: url(../imgs/2-2.png) !important;
+    background-size: cover !important;
+}
+
+.p-2-3 {
+    background: url(../imgs/2-3.png) !important;
+    background-size: cover !important;
+}
+
+.p-2-4 {
+    background: url(../imgs/2-4.png) !important;
+    background-size: cover !important;
+}
+
+.p-3-1 {
+    background: url(../imgs/3-1.png) !important;
+    background-size: cover !important;
+}
+
+.p-3-2 {
+    background: url(../imgs/3-2.png) !important;
+    background-size: cover !important;
+}
+
+.p-3-3 {
+    background: url(../imgs/3-3.png) !important;
+    background-size: cover !important;
+}
+
+.p-3-4 {
+    background: url(../imgs/3-4.png) !important;
+    background-size: cover !important;
+}
+
+.p-4-1 {
+    background: url(../imgs/4-1.png) !important;
+    background-size: cover !important;
+}
+
+.p-4-2 {
+    background: url(../imgs/4-2.png) !important;
+    background-size: cover !important;
+}
+
+.p-4-3 {
+    background: url(../imgs/4-3.png) !important;
+    background-size: cover !important;
+}
+
+.p-4-4 {
+    background: url(../imgs/4-4.png) !important;
+    background-size: cover !important;
+}
+
+.p-5-1 {
+    background: url(../imgs/5-1.png) !important;
+    background-size: cover !important;
+}
+
+.p-5-2 {
+    background: url(../imgs/5-2.png) !important;
+    background-size: cover !important;
+}
+
+.p-5-3 {
+    background: url(../imgs/5-3.png) !important;
+    background-size: cover !important;
+}
+
+.p-5-4 {
+    background: url(../imgs/5-4.png) !important;
+    background-size: cover !important;
+}
+
+
+

@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 5760px;
+    height: 1080px;
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+
+.page {
+    width: 5760px;
+    height: 1080px;
+
+}
+
+iframe {
+    width: 5760px;
+    height: 1080px;
+    border: none;
+    outline: none;
+    background-color: #333333;
+}
+
+.mp4-m {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}

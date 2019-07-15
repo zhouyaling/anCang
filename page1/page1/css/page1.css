@@ -1,0 +1,505 @@
+body {
+    color: #fff;
+    width: 5760px!important;
+    font-family: PingFang-Regular;
+}
+
+.page-wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.page-box {
+    width: 5570px;
+    /* width: 5450px; */
+    height: 950px;
+    background: #0A0E21;
+    border: 1px solid transparent;
+    border-radius: 18px;
+    background-clip: padding-box;
+    position: absolute;
+    top: 65px;
+    left: 90px;
+    /* position: relative; */
+}
+
+.page-box::after {
+    position: absolute;
+    top: -4px;
+    bottom: -4px;
+    left: -4px;
+    right: -4px;
+    background: linear-gradient(to right, #1F1EB8, rgba(255, 255, 255, 0.6), transparent, rgba(255, 255, 255, 0.6), #625AFF);
+    content: '';
+    z-index: -1;
+    border-radius: 18px;
+}
+
+.logo {
+    width: 382px;
+    height: 84px;
+    background: #070B19;
+    position: absolute;
+    top: 0px;
+    left: 140px;
+    z-index: 1;
+}
+
+
+/* 页面一 人流统计样式 */
+
+.module1 {
+    width: 1480px;
+}
+
+
+/* 圆圈样式 */
+
+.circle-box {
+    position: relative;
+    width: 210px;
+    height: 210px;
+    left: 50%;
+    transform: translateX(-50%) translateY(2%);
+}
+
+.circle-box canvas {}
+
+.circle-box .circle-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+}
+
+.total-user-box {
+    width: 25%;
+    height: 50%;
+}
+
+.today-user-box {
+    /*  border-left: 2px solid rgba(41, 48, 84, 0.33);
+    border-right: 2px solid rgba(41, 48, 84, 0.33); */
+    /*  width: 20%; */
+    text-align: left;
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+}
+
+.today-user-box p:nth-of-type(1) {
+    font-size: 22px;
+    color: #8996DF;
+}
+
+.today-user-box p:nth-of-type(2) {
+    font-size: 16px;
+    letter-spacing: 0.33px;
+}
+
+.today-user-info {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.spec {
+    /*   margin: 10px 0 0 0!important; */
+}
+
+.spec p:nth-of-type(3) {
+    font-size: 22px;
+    color: #8996DF;
+    margin-bottom: 0px!important;
+    /*  margin-top: 23px!important; */
+}
+
+.spec p:nth-of-type(4) {
+    font-size: 16px;
+    letter-spacing: 0.33px;
+}
+
+.today-detail-box {
+    width: 30%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+}
+
+.laifang-rate-box {
+    width: 26%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.laifang-rate-text {
+    position: absolute;
+    transform: translateX(-42%);
+}
+
+.box-line {
+    width: 2px;
+    background-color: rgba(41, 48, 84, 0.33);
+    height: 135px;
+    display: inline-block;
+}
+
+
+/* 客流统计 */
+
+.module2 {
+    width: 808px;
+}
+
+
+/* 车辆统计 */
+
+.module3 {
+    width: 808px;
+}
+
+
+/* 来访车型统计 */
+
+.module4 {
+    width: 1040px;
+    position: relative;
+}
+
+
+/* 年龄性别分布 */
+
+.module5 {
+    width: 950px;
+}
+
+.user-attribute {
+    width: 35%;
+    height: 70%;
+    float: left;
+    position: relative;
+}
+
+.user-attribute-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    /* top: 45%; */
+    transform: translateX(-50%);
+    flex-direction: column;
+}
+
+.age-group {
+    width: 65%;
+    height: 70%;
+    float: left;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.age-group-text {
+    min-width: 120px;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+
+.age-group-text p {
+    font-size: 16px;
+    color: #8996DF;
+    margin-bottom: 20px;
+}
+
+.age-group-text ul li {
+    list-style: none;
+    font-size: 12px;
+    color: #8996DF;
+    margin-bottom: 10px;
+}
+
+.age-group-text ul li .ico-circle {
+    width: 12px;
+    height: 12px;
+    background: url(../imgs/ico-circle.png) no-repeat center;
+    background-size: 12px 12px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+}
+
+.age-group-text ul li .age-total-rate {
+    float: right;
+    font-family: din;
+    font-size: 12px;
+    color: #FFFFFF;
+    position: relative;
+    top: 3px;
+    right: 0;
+}
+
+
+/* 区域客流数量 */
+
+.module6 {
+    width: 950px;
+}
+
+.area-user-box {
+    width: 100%;
+    height: 80%;
+    position: relative;
+    background: url(../imgs/back-g.png) no-repeat center;
+    background-size: 756px 172px;
+}
+
+.top-text {
+    position: absolute;
+    right: 60px;
+    top: -23px;
+    font-size: 16px;
+    color: #8996DF;
+}
+
+.orange-circle {
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+    background: #FF6736;
+    display: inline-block;
+}
+
+
+/* 驻客停留时长分布统计 */
+
+.module7 {
+    width: 810px;
+}
+
+.module8 {
+    width: 514px;
+}
+
+.car-type-chart {
+    width: 100%;
+    height: 80%;
+    margin-top: 1%;
+    float: left;
+    position: relative;
+}
+
+.module9 {
+    width: 1040px;
+}
+
+
+/* 右侧部分 */
+
+.module10 {
+    width: 99%;
+    height: 910px;
+    margin-left: 0px!important;
+}
+
+.dx-module-left {
+    float: left;
+    width: 36%;
+    height: 854px;
+    background: url(../imgs/dx-left-box.png) no-repeat center;
+    background-size: 925px 854px;
+    margin: 30px 0px auto 0px;
+}
+
+.dx-module-right {
+    width: 63%;
+    height: 100%;
+    float: left;
+    margin-top: 20px;
+}
+
+.user-detail-infos {
+    width: 600px;
+    height: 300px;
+    margin-left: 50px;
+    margin-top: 55px;
+}
+
+.active-people-info1 {
+    width: 31%;
+    height: 100%;
+    float: left;
+}
+
+.active-people-info1 p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.active-people-info1 p span:nth-of-type(1) {
+    color: #E9F1FF;
+    display: inline-block;
+    width: 68px;
+}
+
+.active-people-info1 p span:nth-of-type(2) {
+    color: #8BA5FF;
+    font-weight: bold;
+}
+
+.list-t-spec {
+    width: 36%!important;
+}
+
+.list-t-spec p span:nth-of-type(1) {
+    width: 100px!important;
+}
+
+.dx-left-1 {
+    width: 70%;
+    float: left;
+}
+
+.dx-left-2 {
+    width: 30%;
+    float: left;
+}
+
+.dx-module-right {
+    float: left;
+    width: 64%;
+    height: 854px;
+    width: 1050px 854px;
+    color: #E9F1FF;
+}
+
+.dx-map {
+    width: 1650px;
+    height: 480px;
+    /* background: url(../imgs/dx/dx-map.png) no-repeat center;
+    background-size: 1650px 440px; */
+    /* margin-top: 20px; */
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.last-car-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dx-car ul {
+    height: 350px;
+    overflow: hidden;
+    padding-left: 4%;
+}
+
+.dx-car ul li {
+    list-style: none;
+    float: left;
+    width: 46%;
+    margin-bottom: 20px;
+}
+
+.last-car-box {
+    width: 716px;
+    height: 156px;
+    background: url(../imgs/dx/last-car-box.png) no-repeat center;
+    background-size: 100%;
+    margin: 0 auto;
+}
+
+.title-bar-2 {
+    width: 204px;
+    height: 48px;
+    background: url(../imgs/dx/title-bar-2.png) no-repeat center;
+    background-size: 100%;
+    margin-left: 104px;
+}
+
+.last-car-box div {
+    width: 33%;
+    float: left;
+}
+
+.last-car-box div:nth-of-type(1) {
+    width: 36%!important;
+}
+
+.last-car-box .a img {
+    width: 84px;
+    height: 84px;
+    border: 1px solid #1F1EB8;
+    border-radius: 4px;
+    margin-left: 30px;
+    margin-left: 30px;
+}
+
+.last-car-box .a img:nth-of-type(2) {
+    margin-left: 10px!important;
+}
+
+.last-car-box .b p {
+    font-family: PingFang-Regular;
+    font-size: 16px;
+    color: #829DFF;
+    margin-bottom: 9px;
+}
+
+.last-car-box .b p span {
+    font-size: 20px;
+    color: #E9F1FF;
+    margin-left: 30px;
+}
+
+
+/* 筛选 */
+
+.filters {
+    position: absolute;
+    right: 177px;
+    top: 34px;
+    width: 900px;
+    height: 45px;
+    background: #070B19;
+    background: url(../imgs/filter.png) no-repeat center;
+    background-size: 890px 45px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+}
+
+.filters p:nth-of-type(1) {
+    width: 317px;
+    text-align: center;
+    font-size: 20px;
+    color: #FFFFFF;
+    letter-spacing: 0.13px;
+}
+
+.filters p:nth-of-type(2) {
+    width: 370px;
+    text-align: center;
+    font-size: 20px;
+    color: #FFFFFF;
+    letter-spacing: 0.13px;
+}
+
+.spec-c li {
+    margin-bottom: 6px!important;
+}
+
+.laifang-legend {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+}
