@@ -1,0 +1,1196 @@
+body {
+    overflow: auto!important;
+    background: -webkit-linear-gradient(left, rgba(16, 21, 26, 1) 1%, rgba(26, 34, 41, 1) 30%)
+}
+
+.wrap-container {
+    padding: 0!important;
+    height: 1080px;
+}
+
+#container-loading {
+    margin-top: 26%;
+    margin-left: 50.5%;
+}
+
+#myCanvas {
+    z-index: 3;
+}
+
+.house-point-box div:nth-of-type(4) {
+    cursor: pointer;
+    z-index: 99;
+}
+
+.back-blue {
+    /*  height: 1080px!important; */
+    min-height: 1080px;
+    position: relative;
+    background: url(../imgs/dx/house-back.png) no-repeat right!important;
+    background-size: auto 1080px;
+}
+
+.dongxian {
+    margin: 0 !important;
+    transform: scale3d(0.95, 0.7, 1)!important;
+    /*   float: right;
+    margin-right: -40px!important; */
+    float: left;
+    /*   margin-left: 270px!important;*/
+    margin-top: -135px!important;
+}
+
+.house-point-info {
+    /* cursor: pointer; */
+}
+
+.module-left {
+    width: 365px;
+    float: left;
+    color: #fff;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.left-box {
+    width: 365px;
+    height: 935px;
+    background: url(../imgs/dx/left-box.png) no-repeat center;
+    background-size: 365px auto;
+    margin-top: 38px;
+    padding-left: 35px;
+    padding-top: 35px;
+    position: relative;
+    z-index: 1;
+}
+
+.title-bar {
+    width: 366px;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 20px;
+    background: url(../imgs/dx/title-bar.png) no-repeat center;
+    background-size: 366px auto;
+    /* font-family: PingFang; */
+    font-size: 28px;
+    color: #E9F1FF;
+    margin-left: 50px;
+    margin-top: 60px;
+}
+
+.active-img-box {
+    width: 540px;
+    height: 390px;
+    margin-left: 60px;
+    border: 1px solid #ccc;
+}
+
+.active-img-box img {
+    width: 539px;
+    height: 388px;
+}
+
+.active-people-box {
+    width: 100%;
+    height: 115px;
+    margin: 27px auto;
+}
+
+.active-people-header {
+    width: 32%;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+
+.active-people-header p {
+    margin-top: 4px;
+    font-family: din;
+    font-size: 20px;
+    color: #E9F1FF;
+}
+
+.active-header-img {
+    width: 100%;
+    height: 160px;
+    background: url(../imgs/dx/face-box.png) no-repeat center;
+    background-size: 160px 160px;
+}
+
+.active-header-img img {
+    position: relative;
+    top: 21px;
+    left: 1px;
+    width: 112px;
+    height: 114px;
+    border-radius: 8px;
+    border: 2px solid #196DF7;
+}
+
+.active-people-info {
+    width: 60%;
+    float: left;
+    margin-left: 5%;
+    font-family: "Microsoft YaHei";
+}
+
+.active-people-info p {
+    font-size: 16px;
+    color: #E9F1FF;
+    margin-bottom: 8px;
+}
+
+.active-people-info p:last-of-type {
+    margin-bottom: 0!important;
+}
+
+.active-people-info span {
+    font-family: "Microsoft YaHei";
+    font-size: 16px;
+    color: #8BA5FF;
+}
+
+
+/* 最近抓拍访客样式 */
+
+.people-list-title {
+    width: 216px;
+    height: 50px;
+    line-height: 50px;
+    background: url(../imgs/dx/title-bar-1.png) no-repeat center;
+    background-size: auto 50px;
+    padding-left: 16px;
+    /* font-family: PingFang; */
+    font-size: 24px;
+    color: #E9F1FF;
+    margin-top: 60px;
+}
+
+.people-list {
+    width: 100%;
+    height: 700px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.people-list::-webkit-scrollbar {
+    display: none;
+}
+
+.people-list li {
+    list-style: none;
+    margin-top: 34px;
+    clear: both;
+    display: flex;
+}
+
+.list-item-left {
+    width: 50%;
+    float: left;
+    /*  display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.list-item-img-box {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.list-item-img-box .img-car-label {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 26px;
+    height: 26px;
+    /*  line-height: 25px; */
+    text-align: center;
+    border-radius: 50%;
+    background: url(../imgs/dx/ico-car.png) no-repeat center;
+    background-size: 26px auto;
+    /* background: #E5992C; */
+    /* border: 1px solid #2943A4; */
+    /* font-size: 10px; */
+    /*  color: #fff; */
+}
+
+.list-item-img-box .img-phone-label {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    border-radius: 50%;
+    background: url(../imgs/dx/ico-phone.png) no-repeat center;
+    background-size: 26px auto;
+}
+
+.list-item-img-box .s-label:nth-of-type(2) {
+    right: -18px!important;
+}
+
+.list-item-left img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid #8BA5FF;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.list-item-right {
+    width: 50%;
+    float: left;
+    margin-top: 10px;
+}
+
+.list-item-right p:nth-of-type(1) {
+    /* font-family: PingFang; */
+    font-size: 16px;
+    color: #E9F1FF;
+}
+
+.list-item-right p:nth-of-type(2) {
+    font-family: din;
+    font-size: 18px;
+    color: #829DFF;
+}
+
+
+/* 底部模块 */
+
+.module-bottom {
+    position: absolute;
+    bottom: 85px;
+    left: 426px;
+    color: #fff;
+    height: 154px;
+}
+
+.bottom-m-1 {
+    width: 159px;
+    height: 154px;
+    position: relative;
+    float: left;
+    text-align: center;
+    /*  font-family: PingFang; */
+    font-size: 12px;
+    color: #BBC6DA;
+    letter-spacing: 0.18px;
+    margin-left: 20px;
+}
+
+.bottom-m-1 p:nth-of-type(1) {
+    width: 100%;
+    text-align: center;
+    font-family: din;
+    font-size: 32px;
+    color: #FFFFFF;
+    letter-spacing: 0.36px;
+    position: absolute;
+    top: 30%;
+}
+
+.bottom-m-1 p:nth-of-type(2) {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 57%;
+}
+
+.bottom-m-2 {
+    float: left;
+    /*  width: 217px;
+    height: 128px; */
+    width: 236px;
+    height: 170px;
+    background: url(../imgs/dx/sex-box.png) no-repeat center;
+    background-size: 236px auto;
+    margin-top: 13px;
+    color: #ccc;
+    font-size: 12px;
+    margin-left: 40px;
+}
+
+.bottom-m-2 div {
+    height: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 6px;
+}
+
+.bottom-m-2 div span:nth-of-type(1) {
+    font-family: din;
+    font-size: 25px;
+    color: #FFFFFF;
+    letter-spacing: 0.36px;
+    min-width: 66px;
+}
+
+.bottom-m-2 div span:nth-of-type(3) {}
+
+.total-car-label {
+    min-width: 0!important;
+    margin-right: 5px;
+}
+
+.bottom-m-2 .total-car-rate-label {
+    font-size: 12px;
+    font-family: din;
+    color: #fff;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.bottom-m-2 .total-car {
+    margin-left: 50px;
+    font-size: 25px;
+    font-family: din;
+    color: #fff;
+}
+
+.bottom-m-3 {
+    width: 500px;
+    height: 100%;
+    float: left;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.canvas-item {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    /*  top: 50%;
+    transform: translateY(-50%); */
+    float: left;
+    margin-left: 9%;
+}
+
+.canvas-item:nth-of-type(1) {
+    margin-left: 0%;
+}
+
+.canvas-item-reset-5 {
+    margin-left: 1%!important;
+}
+
+.canvas-item-reset-4 {
+    margin-left: 5%!important;
+}
+
+.canvas-item span {
+    font-family: din;
+    font-size: 28px;
+    color: #FFFFFF;
+    letter-spacing: 0.35px;
+}
+
+.canvas-item div:nth-of-type(1) {
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    width: 100%;
+    height: 100%;
+    font-size: 12.8px;
+    color: #AAAAAA;
+    letter-spacing: 0.16px;
+}
+
+.canvas-item div:nth-of-type(2) {
+    position: absolute;
+    text-align: center;
+    top: 59%;
+    width: 100%;
+    height: 100%;
+    font-size: 12.8px;
+    color: #AAAAAA;
+    letter-spacing: 0.16px;
+}
+
+.bottom-m-4 {
+    width: 396px;
+    height: 100%;
+    background: url(../imgs/dx/car-total.png) no-repeat center;
+    background-size: 396px 136px;
+    float: left;
+    position: relative;
+    margin-left: 50px;
+}
+
+.bottom-m-4 div {
+    width: 32.2%;
+    float: left;
+    font-size: 12px;
+    color: #BBC6DA;
+    letter-spacing: 0px;
+}
+
+.bottom-m-4 div:nth-of-type(1) {
+    padding-left: 3%;
+    padding-top: 6%;
+}
+
+.bottom-m-4 div:nth-of-type(2) {
+    text-align: center;
+    padding-top: 14%;
+}
+
+.bottom-m-4 div:nth-of-type(3) {
+    padding-left: 8%;
+    padding-top: 6%;
+}
+
+.count-style {
+    height: 40px;
+    margin-bottom: 5px!important;
+}
+
+.bottom-m-4 div img {
+    width: 16px;
+    height: auto;
+}
+
+.total-number {
+    font-family: din;
+    font-size: 31px;
+    color: #FFFFFF;
+}
+
+
+/* 最近入场车辆 */
+
+.active-car-box {
+    width: 540px;
+    height: 80px;
+    background: url(../imgs/dx/car-box.png) no-repeat center;
+    background-size: 540px auto;
+    position: absolute;
+    bottom: 100px;
+    left: 974px;
+    opacity: 0;
+}
+
+.active-car-box p {
+    position: absolute;
+    right: 31px;
+    top: 20px;
+    font-size: 13.99px;
+    color: #FFFFFF;
+}
+
+.active-car-box ul {
+    display: inline-block;
+    position: absolute;
+    left: 28px;
+    top: 23px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.active-car-box ul li {
+    list-style: none;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active-car-box ul li:nth-of-type(2) {
+    padding-top: 8px;
+}
+
+.active-car-box ul li:nth-of-type(3) {
+    padding-top: 8px;
+}
+
+.active-car-box ul li img {
+    width: 15px;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 5px;
+}
+
+.active-car-img {
+    cursor: pointer;
+    z-index: 99;
+}
+
+.active-car-box ul li:nth-of-type(1) img {
+    width: 46px;
+    height: 34px;
+    border: 1px solid #196DF7;
+    border-radius: 4px;
+    margin-left: 0px!important;
+    margin-right: 0px!important;
+}
+
+.padding-right-8 {
+    padding-right: 8px;
+}
+
+.point-number {
+    /*  cursor: pointer; */
+}
+
+.point-number span {
+    z-index: 100;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    left: 7px;
+    top: 7px;
+}
+
+
+/* 熱區圖 */
+
+
+/* .hot-camera2-active {
+    width: 81px;
+    height: 73px;
+    background: url(../imgs/dx/hot-camera2-active.png) no-repeat center;
+    background-size: 81px auto;
+    position: absolute;
+    left: -63px;
+    top: 10px;
+    animation: camera-move-2 2s linear 2 alternate;
+    transform-origin: 100% 100%;
+    opacity: 0;
+} */
+
+.hot-area-0 {
+    width: 116px;
+    height: 100px;
+    background: url(../imgs/dx/hot-area-3.png) no-repeat center;
+    background-size: 116px auto;
+    position: absolute;
+    left: 26px;
+    top: 22px;
+    animation: area-6 1s linear 2 alternate;
+    -webkit-animation: area-6 1s linear 2 alternate;
+    opacity: 0;
+}
+
+.hot-camera-0 {
+    width: 34px;
+    height: 34px;
+    background: url(../imgs/dx/hot-camera-1.png) no-repeat center;
+    background-size: 34px auto;
+    transform: scale3d(-1, 1, -1) rotate(22deg);
+    -o-transform: scale3d(-1, 1, -1) rotate(22deg);
+    -moz-transform: scale3d(-1, 1, -1) rotate(22deg);
+    -webkit-transform: scale3d(-1, 1, -1) rotate(22deg);
+    position: absolute;
+    top: -5px;
+    left: 25px;
+    z-index: 9999!important;
+}
+
+.hot-area-1 {
+    width: 84px;
+    height: 56px;
+    background: url(../imgs/dx/hot-area-1.png) no-repeat center;
+    background-size: 84px auto;
+    position: absolute;
+    left: 18px;
+    top: 22px;
+    animation: area-6 1s linear 2 alternate;
+    -webkit-animation: area-6 1s linear 2 alternate;
+    opacity: 0;
+}
+
+.hot-camera-1 {
+    width: 34px;
+    height: 34px;
+    background: url(../imgs/dx/hot-camera-1.png) no-repeat center;
+    background-size: 34px auto;
+    transform: scale3d(-1, 1, -1) rotate(0deg);
+    -o-transform: scale3d(-1, 1, -1) rotate(0deg);
+    -moz-transform: scale3d(-1, 1, -1) rotate(0deg);
+    -webkit-transform: scale3d(-1, 1, -1) rotate(0deg);
+    position: absolute;
+    top: -1px;
+    left: 27px;
+    z-index: 9999!important;
+}
+
+.hot-area-2 {
+    width: 84px;
+    height: 56px;
+    background: url(../imgs/dx/hot-area-1.png) no-repeat center;
+    background-size: 84px auto;
+    position: absolute;
+    left: -69px;
+    top: -29px;
+    animation: area-6 1s linear 2 alternate;
+    -webkit-animation: area-6 1s linear 2 alternate;
+    opacity: 0;
+}
+
+.hot-camera-2 {
+    width: 34px;
+    height: 34px;
+    background: url(../imgs/dx/hot-camera-6.png) no-repeat center;
+    background-size: 34px auto;
+    position: absolute;
+    top: -18px;
+    left: -2px;
+    z-index: 2;
+}
+
+.hot-area-4 {
+    width: 188px;
+    height: 100px;
+    background: url(../imgs/dx/hot-area-3.png) no-repeat center;
+    background-size: 188px auto;
+    position: absolute;
+    left: -335px;
+    top: -66px;
+    animation: area-6 1s linear 2 alternate;
+    -webkit-animation: area-6 1s linear 2 alternate;
+    opacity: 0;
+}
+
+.hot-camera-3 {
+    width: 34px;
+    height: 42px;
+    background: url(../imgs/dx/hot-camera-5.png) no-repeat center;
+    background-size: 34px auto;
+    position: absolute;
+    top: -18px;
+    left: 13px;
+    z-index: 2;
+    z-index: 9999!important;
+}
+
+.hot-area-3 {
+    width: 188px;
+    height: 100px;
+    background: url(../imgs/dx/hot-area-3.png) no-repeat center;
+    background-size: 188px auto;
+    position: absolute;
+    left: 130px;
+    top: -99px;
+    animation: area-6 1s linear 2 alternate;
+    -webkit-animation: area-6 1s linear 2 alternate;
+    opacity: 0;
+}
+
+.hot-camera-4 {
+    width: 34px;
+    height: 42px;
+    background: url(../imgs/dx/hot-camera-6.png) no-repeat center;
+    background-size: 34px auto;
+    position: absolute;
+    top: -18px;
+    left: -3px;
+    z-index: 2;
+    z-index: 9999!important;
+}
+
+.hot-area-5 {
+    width: 84px;
+    height: 56px;
+    background: url(../imgs/dx/hot-area-1.png) no-repeat center;
+    background-size: 84px auto;
+    position: absolute;
+    left: 18px;
+    top: -75px;
+    animation: area-6 1s linear 2 alternate;
+    -webkit-animation: area-6 1s linear 2 alternate;
+    opacity: 0;
+}
+
+.hot-camera-5 {
+    width: 34px;
+    height: 42px;
+    background: url(../imgs/dx/hot-camera-5.png) no-repeat center;
+    background-size: 34px auto;
+    position: absolute;
+    top: -19px;
+    left: 4px;
+    transform: rotate(-22deg);
+    z-index: 9999!important;
+}
+
+.hot-camera-6 {
+    width: 34px;
+    height: 42px;
+    background: url(../imgs/dx/hot-camera-6.png) no-repeat center;
+    background-size: 34px auto;
+    position: absolute;
+    top: -5px;
+    left: -10px;
+    transform: rotate(-29deg);
+    z-index: 9999!important;
+    /*  animation: camera-move-2 2s linear 5 alternate;
+    transform-origin: 100% 80%; */
+}
+
+.hot-area-6 {
+    width: 84px;
+    height: 56px;
+    background: url(../imgs/dx/hot-area-1.png) no-repeat center;
+    background-size: 84px auto;
+    position: absolute;
+    left: -168px;
+    top: 22px;
+    animation: area-6 1s linear 2 alternate;
+    -webkit-animation: area-6 1s linear 2 alternate;
+    opacity: 0;
+}
+
+.hot-camera-7 {
+    width: 34px;
+    height: 42px;
+    background: url(../imgs/dx/hot-camera-6.png) no-repeat center;
+    background-size: 34px auto;
+    position: absolute;
+    top: -7px;
+    left: -12px;
+    transform: rotate(-29deg);
+    z-index: 9999!important;
+    /*  animation: camera-move-2 2s linear 5 alternate;
+    transform-origin: 100% 80%; */
+}
+
+.hot-area-7 {
+    width: 84px;
+    height: 56px;
+    background: url(../imgs/dx/hot-area-1.png) no-repeat center;
+    background-size: 84px auto;
+    position: absolute;
+    left: -49px;
+    top: 22px;
+    animation: area-6 1s linear 2 alternate;
+    -webkit-animation: area-6 1s linear 2 alternate;
+    opacity: 0;
+}
+
+.hot-camera-8 {
+    width: 34px;
+    height: 42px;
+    background: url(../imgs/dx/hot-camera-6.png) no-repeat center;
+    background-size: 34px auto;
+    position: absolute;
+    top: -18px;
+    left: 4px;
+    transform: rotate(28deg);
+    z-index: 9999!important;
+    /*  animation: camera-move-2 2s linear 5 alternate;
+    transform-origin: 100% 80%; */
+}
+
+.hot-area-8 {
+    width: 84px;
+    height: 56px;
+    background: url(../imgs/dx/hot-area-1.png) no-repeat center;
+    background-size: 84px auto;
+    position: absolute;
+    left: -54px;
+    top: -50px;
+    animation: area-6 1s linear 2 alternate;
+    -webkit-animation: area-6 1s linear 2 alternate;
+    opacity: 0;
+}
+
+.hot-light-0 {
+    width: 64px;
+    height: 36px;
+    position: absolute;
+    top: 13px;
+    left: 55px;
+    background: url(../imgs/dx/hot-light-5.png) no-repeat center;
+    background-size: 64px auto;
+    transform: scale3d(1, -1, -1) rotate(-1deg);
+    -o-transform: scale3d(1, -1, -1) rotate(-1deg);
+    -moz-transform: scale3d(1, -1, -1) rotate(-1deg);
+    -webkit-transform: scale3d(1, -1, -1) rotate(-1deg);
+    animation: area-6 0.5s linear 2 alternate;
+    -webkit-animation: area-6 0.5s linear 2 alternate;
+    opacity: 0;
+}
+
+.hot-light-1 {
+    width: 64px;
+    height: 36px;
+    position: absolute;
+    top: 31px;
+    left: 42px;
+    background: url(../imgs/dx/hot-light-5.png) no-repeat center;
+    background-size: 64px auto;
+    transform: scale3d(1, -1, -1) rotate(-24deg);
+    -o-transform: scale3d(1, -1, -1) rotate(-24deg);
+    -moz-transform: scale3d(1, -1, -1) rotate(-24deg);
+    -webkit-transform: scale3d(1, -1, -1) rotate(-24deg);
+    animation: area-6 0.5s linear 2 alternate;
+    -webkit-animation: area-6 0.5s linear 2 alternate;
+    opacity: 0;
+}
+
+.hot-light-2 {
+    width: 64px;
+    height: 36px;
+    position: absolute;
+    top: -33px;
+    left: -62px;
+    background: url(../imgs/dx/hot-light-2.png) no-repeat center;
+    background-size: 64px auto;
+    opacity: 0;
+    animation: area-6 0.5s linear 2 alternate;
+    -webkit-animation: area-6 0.5s linear 2 alternate;
+}
+
+.hot-light-4 {
+    width: 64px;
+    height: 43px;
+    position: absolute;
+    top: -37px;
+    left: -62px;
+    background: url(../imgs/dx/hot-light-2.png) no-repeat center;
+    background-size: 64px auto;
+    animation: area-6 0.5s linear 2 alternate;
+    -webkit-animation: area-6 0.5s linear 2 alternate;
+    opacity: 0;
+}
+
+.hot-light-3 {
+    width: 64px;
+    height: 43px;
+    position: absolute;
+    top: -41px;
+    left: 27px;
+    background: url(../imgs/dx/hot-light-5.png) no-repeat center;
+    background-size: 64px auto;
+    animation: area-6 0.5s linear 2 alternate;
+    -webkit-animation: area-6 0.5s linear 2 alternate;
+    opacity: 0;
+}
+
+.hot-light-5 {
+    width: 64px;
+    height: 43px;
+    position: absolute;
+    top: -65px;
+    left: 17px;
+    background: url(../imgs/dx/hot-light-5.png) no-repeat center;
+    background-size: 64px auto;
+    transform: rotate(-24deg);
+    opacity: 0;
+    animation: area-6 0.5s linear 2 alternate;
+    -webkit-animation: area-6 0.5s linear 2 alternate;
+}
+
+.hot-light-6 {
+    width: 56px;
+    height: 57px;
+    position: absolute;
+    top: 2px;
+    left: -66px;
+    background: url(../imgs/dx/hot-light-6.png) no-repeat center;
+    background-size: 56px auto;
+    transform: rotate(12deg);
+    opacity: 0;
+    animation: area-6 0.5s linear 2 alternate;
+    -webkit-animation: area-6 0.5s linear 2 alternate;
+}
+
+.hot-light-7 {
+    width: 56px;
+    height: 57px;
+    position: absolute;
+    top: 2px;
+    left: -66px;
+    background: url(../imgs/dx/hot-light-6.png) no-repeat center;
+    background-size: 56px auto;
+    transform: rotate(12deg);
+    opacity: 0;
+    animation: area-6 0.5s linear 2 alternate;
+    -webkit-animation: area-6 0.5s linear 2 alternate;
+}
+
+.hot-light-8 {
+    width: 64px;
+    height: 44px;
+    position: absolute;
+    top: -48px;
+    left: -44px;
+    background: url(../imgs/dx/hot-light-8.png) no-repeat center;
+    background-size: 64px auto;
+    transform: rotate(12deg);
+    opacity: 0;
+    animation: area-6 0.5s linear 2 alternate;
+    -webkit-animation: area-6 0.5s linear 2 alternate;
+}
+
+@keyframes camera-move-2 {
+    0% {
+        opacity: 1;
+        transform: rotate(25deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0deg)
+    }
+}
+
+@-webkit-keyframes camera-move-2 {
+    0% {
+        opacity: 1;
+        transform: rotate(25deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0deg)
+    }
+}
+
+@keyframes area-6 {
+    0% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes area-6 {
+    0% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* 視頻彈窗 */
+
+.video-show {
+    display: block!important;
+    animation: show-v 1s linear;
+    -webkit-animation: show-v 1s linear;
+}
+
+@keyframes show-v {
+    0% {
+        opacity: 0;
+        /*   transform: scale3d(0.5, 0.5, 1); */
+    }
+    100% {
+        opacity: 1;
+        /* transform: scale3d(1, 1, 1); */
+    }
+}
+
+@-webkit-keyframes show-v {
+    0% {
+        opacity: 0;
+        /*  transform: scale3d(0.5, 0.5, 1); */
+    }
+    100% {
+        opacity: 1;
+        /*    transform: scale3d(1, 1, 1); */
+    }
+}
+
+.video-box {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-30%);
+    top: 62%;
+    width: 586px;
+    height: 333px;
+    background: url(../imgs/dx/jiankong-box.png) no-repeat center;
+    background-size: 586px auto;
+    z-index: 9;
+    /*  display: flex;
+    align-items: center;
+    justify-content: center; */
+    display: none;
+}
+
+.close-video {
+    position: absolute;
+    top: -3px;
+    right: -1px;
+    width: 33px;
+    height: 30px;
+    background: url(../imgs//dx/ico-close.png) no-repeat center;
+    background-size: 30px auto;
+    cursor: pointer;
+}
+
+.video-box video {
+    width: 457px;
+    height: 257px;
+}
+
+.video-box object {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.video-box-left img:nth-of-type(1) {
+    width: 25px;
+    height: auto;
+    position: absolute;
+    left: 25px;
+    top: 40px;
+}
+
+.video-box-left img:nth-of-type(2) {
+    width: 25px;
+    height: auto;
+    position: absolute;
+    left: 25px;
+    bottom: 40px;
+}
+
+.video-box-right {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+}
+
+.video-box-right div {
+    width: 18px;
+    height: 16px;
+    background: url(../imgs/dx/ico-arrow-2.png) no-repeat center;
+    background-size: 16px auto;
+    margin-top: 8px;
+    opacity: 0.4;
+}
+
+.arrow-show-1 {
+    opacity: 1!important;
+}
+
+.arrow-show-2 {
+    background: url(../imgs/dx/ico-arrow-1.png) no-repeat center!important;
+    background-size: 16px auto!important;
+    opacity: 1!important;
+}
+
+.park-point-info {
+    width: 231px;
+    height: 82px;
+    background: url(../imgs/dx/park-box.png) no-repeat 0;
+    background-size: 231px auto;
+    position: absolute;
+    top: 577px!important;
+    left: 238px!important;
+    z-index: 99999;
+}
+
+.park-point-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border: 1px solid #196DF7;
+}
+
+.park-point-info div:nth-child(1) {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 99999!important;
+}
+
+.park-point-info div:nth-child(2) {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 83px;
+    top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 99999!important;
+}
+
+.park-point-info div:nth-child(3) {
+    font-size: 10px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 20px;
+    right: 12px;
+}
+
+.park-point-info div:nth-child(3) p:nth-child(2) {
+    font-size: 12px;
+}
+
+.point-info-0 img:nth-of-type(1) {
+    width: 50px;
+    height: 50px;
+    margin-left: -54px;
+}
+
+.point-info-0 img:nth-of-type(2) {
+    width: 50px;
+    height: 50px;
+    margin-left: 6px;
+}
+
+.point-info-0 .ico-carnumber {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 5px;
+    background: url(../imgs/dx/ico-carnum.png) no-repeat center;
+    background-size: 15px auto;
+}
+
+.point-info-0 p:nth-of-type(1) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spec {
+    top: 14px!important;
+}
+
+.spec div p {
+    margin-bottom: 3px!important;
+}
+
+.spec div {
+    top: 23px!important;
+    height: 130px!important;
+    background-size: 183px 130px!important;
+}
+
+.spec img:nth-of-type(1) {
+    width: 50px!important;
+    height: 50px!important;
+    margin-left: -55px!important;
+}
+
+.spec img:nth-of-type(2) {
+    width: 50px!important;
+    height: 50px!important;
+    margin-left: 7px!important;
+}
+
+.face-show {
+    display: none;
+}
